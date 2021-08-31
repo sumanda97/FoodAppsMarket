@@ -20,7 +20,10 @@ class MyApp extends StatelessWidget {
       ],
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SignInPage(),
+        routes: {
+          '/': (context) => SplashPage(),
+          '/sign-in': (context) => SignInPage(),
+        },
       ),
     );
   }
